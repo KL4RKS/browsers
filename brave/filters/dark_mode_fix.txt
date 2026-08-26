@@ -1,0 +1,27 @@
+!! Custom filter list for Brave when dark mode is enabled globally
+!! brave://flags/#enable-force-dark (Auto Dark Mode for Web Contents) > Enabled
+
+!! Sites that don't implement the built-in dark mode well
+
+!! USU Sites
+! ! Enforce light color scheme for Banner Admin locally or on Ellucian Cloud domains
+! ! For some reason light dark didn't work for ellucian cloud, the page title was white on light grey instead of the darker text color.
+banner.usu.edu,experience.elluciancloud.com,experience-test.elluciancloud.com##:root:style(color-scheme: light only)
+
+! ! Banner Admin Iframe - Set to light mode
+banner.usu.edu,experience.elluciancloud.com,experience-test.elluciancloud.com##iframe:style(color-scheme: light)
+! !
+!banner.usu.edu##.image-more:style(color-scheme: light only !important; background-color: #bbb !important;)
+!banner.usu.edu##button:style(color-scheme: light only !important; background-color: #bbb !important;)
+!banner.usu.edu##.image.image5:style(color-scheme: light only !important; background-color: #fff !important;)
+
+! ! Let sites use light or dark
+theme.elluciancloud.com,catalog.usu.edu,virtualpiano.net,pf.payfactors.com,usu.myabsorb.com##:root:style(color-scheme: light dark !important;)
+
+! ! setting for google
+google.com##:root:style(color-scheme: light dark !important)
+chromewebstore.google.com##:root:style(color-scheme: light only !important)
+
+!! Portions of a site
+! ! Tello.com exception for qr codes
+tello.com##[class^="qr"]:style(color-scheme: light only !important; background-color: #fff !important;)
